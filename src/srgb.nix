@@ -18,8 +18,7 @@ in rec {
         a = math.round (srgb.a * 255.0);
       };
     in
-      "#"
-        + tr.alignedDecimalToHex clamped.r 2
+      tr.alignedDecimalToHex clamped.r 2
         + tr.alignedDecimalToHex clamped.g 2
         + tr.alignedDecimalToHex clamped.b 2
         + (if clamped.a == 255 then "" else tr.alignedDecimalToHex clamped.a 2);
